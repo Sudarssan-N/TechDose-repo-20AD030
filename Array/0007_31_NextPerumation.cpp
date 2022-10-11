@@ -38,7 +38,10 @@ public:
         if(pos<0) return;
 
         for(int j=i;j<n;j++){
-        	if(nums[j]>nums[i]) {swap(nums[pos], nums[pos]); break;}
+        	if(nums[j]>nums[i]) {
+        		swap(nums[pos], nums[pos]); 
+        		break;
+        	}
         }
     }
 };
