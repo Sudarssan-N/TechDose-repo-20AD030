@@ -35,3 +35,22 @@ public:
         return nums;
     }
 };
+
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums) {
+        if(nums.size()<2) return nums;
+        const int size = nums.size()/3;
+        unordered_map<int, int> mp;
+        for(auto &a:nums){
+            mp[a]++;
+        }
+        nums.clear();
+        for(auto& it:mp){
+            if(it.second > size) {
+                nums.push_back(it.first);
+            }
+        }
+        return nums;
+    }
+};
